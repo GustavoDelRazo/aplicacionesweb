@@ -1,7 +1,7 @@
 import web
-from mvc.models.modelo_calculadora import ModeloCalculadora
+from mvc.controllers.models.calcu import Calcu
 
-render = web.template.render('mvc/views/', base='layout')
+render = web.template.render('mvc/controllers/views/', base='calcus')
 
 class Calculadora:
     def GET(self):
@@ -16,7 +16,7 @@ class Calculadora:
             data = web.input()
             numero1 = int(data.numero1)
             numero2 = int(data.numero2)
-            resultado = ModeloCalculadora.sumar(numero1, numero2)
+            resultado = Calcu.sumar(numero1, numero2)
             return render.calculadora(resultado=resultado)
         except Exception as e:
             print(f"Error 102 - index {e.args}")
