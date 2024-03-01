@@ -2,33 +2,14 @@
 <html>
 <head>
     <title>Lista de Productos</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Lista de Productos</h1>
-        <!-- Aquí podrías mostrar una tabla con los productos -->
-        <!-- Por ejemplo:
-        <table class="table mt-3">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for producto in productos %}
-                <tr>
-                    <td>{{ producto.id }}</td>
-                    <td>{{ producto.nombre }}</td>
-                    <td>{{ producto.precio }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        -->
-        <a class="btn btn-primary mt-3" href="/insertar_producto">Insertar Producto</a>
-    </div>
+    <h1>Lista de Productos</h1>
+    <ul>
+        % for producto in productos:
+            <li><a href="/ver_producto?id={{ producto.id }}">{{ producto.nombre }}</a></li>
+        % endfor
+    </ul>
+    <a href="/insertar_producto">Insertar Producto</a>
 </body>
 </html>
