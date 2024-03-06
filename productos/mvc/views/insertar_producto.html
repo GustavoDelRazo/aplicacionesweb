@@ -1,7 +1,9 @@
+$def with (productos)
 <!DOCTYPE html>
 <html>
 <head>
     <title>Insertar Producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <h1>Insertar Nuevo Producto</h1>
@@ -10,8 +12,8 @@
         <input type="text" id="nombre" name="nombre" required><br><br>
         <label for="precio">Precio:</label>
         <input type="text" id="precio" name="precio" required><br><br>
-        <input type="submit" value="Insertar Producto">
+        <input type="submit" class="btn btn-secondary mt-3" value="Insertar Producto">
     </form>
-    <a href="/">Volver a la Lista de Productos</a>
+    <a class="btn btn-secondary mt-3" href="/">Volver a la Lista de Productos</a>
 </body>
 </html>
